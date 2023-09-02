@@ -1,0 +1,45 @@
+.CartItemCard{
+    display: flex;
+    height: 10rem;
+    padding: 1.6rem;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+.CartItemCard img{
+    width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+}
+.CartItemCard div{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 1.8rem;
+}
+.CartItemCard div a{
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(24,24,24,0.815);
+}
+.CartItemCard div span{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(24,24,24,0.815);
+}
+.CartItemCard div p{
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: tomato;
+}
+@media (max-width:568px) {
+    .CartItemCard div a{
+        font-size: 2.7rem;
+    }
+    .CartItemCard div span{
+        font-size: 2.3rem;
+    }
+    .CartItemCard div p{
+        font-size: 2.1rem;
+    }
+}

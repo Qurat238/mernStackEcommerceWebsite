@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+  
+  /* Chrome, Safari, Opera, Edge */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type="number"]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  html{
+    font-size: 62.5% !important;
+  }
+  .greenColor{
+    color: green;
+  }
+  .redColor{
+    color: red;
+  }
+
+
+  @media (max-width:998px) {
+    html{
+        font-size: 55% !important;
+    }
+}
+@media (max-width:768px) {
+    html{
+        font-size: 45% !important;
+    }
+}
+@media (max-width:568px) {
+    html{
+        font-size: 35% !important;
+    }
+}
+@media (max-width:440px) {
+    html{
+        font-size: 30% !important;
+    }
+}
+@media (max-width:368px) {
+    html{
+        font-size: 25% !important;
+    }
+}
+
+
+
+
+
+
+
+
+  

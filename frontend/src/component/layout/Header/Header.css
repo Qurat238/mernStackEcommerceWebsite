@@ -1,0 +1,135 @@
+.hamburger {
+    background-color: crimson;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    border: 0.1rem solid skyblue;
+    z-index: 1;
+}
+
+.hamburger span {
+    width: 3.5rem;
+    left: 3.8rem;
+    top: 4.3rem;
+    height: 0.5rem;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+.hamburger span:nth-child(2) {
+    top: 5.2rem;
+}
+
+.hamburger span:nth-child(3) {
+    top: 6.1rem;
+}
+#sidePanel {
+    width: 25vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -25vw;
+    background-color: white;
+    transition: left 0.3s;
+    z-index: 10;
+    border-right: 0.2rem solid black;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10rem;
+}
+
+.links svg {
+    font-size: 3rem;
+    color: crimson;
+    margin-right: 1rem;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: black;
+}
+
+.links a:hover {
+    color: crimson;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.567);
+    display: none;
+}
+
+#close {
+    padding: 0.5rem;
+    background-color: black;
+}
+
+#close svg {
+    font-size: 3rem;
+    color: white;
+}
+
+#sidePanel div {
+    display: flex;
+    margin-top: 3rem;
+}
+@media (max-width:1230px) {
+    .links{
+        padding-left: 8rem;
+    }
+}
+@media (max-width:900px) {
+    .links {
+        padding-left: 6rem;
+    }
+}
+@media (max-width:700px){
+    .links {
+        padding-left: 4rem;
+    }
+}
+@media (max-width:568px) {
+    .links svg {
+        font-size: 4rem;
+    }
+    .links a {
+        font-size: 3.5rem;
+    }
+    #sidePanel {
+        width: 50vw;
+        left: -50vw;
+    }
+    .hamburger{
+        top: 2.5rem;
+        left: 2.5rem;
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    .hamburger span{
+        top: 4.3rem;
+        left: 4.3rem;
+    }
+    .hamburger span:nth-child(2) {
+        top: 5.6rem;
+    }
+    
+        .hamburger span:nth-child(3) {
+            top: 7rem;
+        }
+}

@@ -1,0 +1,170 @@
+.processOrderContainer{
+    background-color: rgb(255,255,255);
+    border-left: 1px solid rgba(0,0,0,0.13);
+    width: 80vw;
+}
+.processOrderPage{
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    background-color: skyblue;
+    padding: 5%;
+}
+.processOrderPage>div:first-child {
+    border: 0.1rem solid black;
+    background-color: white;
+    border-right: none;
+}
+.processOrderPage > div:last-child{
+    border-left: 0.1rem solid rgba(0,0,0,0.279);
+    border: 0.1rem solid black;
+    background-color: white;
+    border-left: none;
+}
+.processShippingArea,
+.processCartItems{
+    padding: 0 10rem;
+}
+.processShippingArea > p,
+.processCartItems > p{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.processShippingArea>p:first-child{
+    margin-top: 5rem;
+}
+.processCartItems{
+    padding: 0 10rem;
+    padding-top: 2rem;
+}
+.processCartItemsContainer{
+    max-height: 30rem;
+    overflow-y: auto;
+    margin: 3rem 6rem;
+}
+.processCartItemsContainer div img{
+    margin: 2rem 0;
+    width: 7rem;
+    margin-right: 3rem;
+}
+.processCartItemsContainer div{
+    display: grid;
+    grid-template-columns: 1fr 3fr 4fr;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.processCartItemsContainer div a{
+    color: #575757;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.processCartItemsContainer div span{
+    font-size: 1.5rem;
+}
+.processOrderForm{
+    margin: 5rem;
+    padding: 4rem;
+    background-color: white;
+}
+.processOrderForm h1{
+    font-size: 3.5rem;
+}
+.processOrderForm div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.processOrderForm div select{
+    font-size: 2rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0.1rem solid rgba(0,0,0,0.267);
+    outline: none;
+    border-radius: 0.4rem;
+    padding: 1.5rem 4rem;
+    margin: 2rem 0;
+}
+.processOrderForm div svg{
+    position: absolute;
+    transform: translateX(1rem);
+    font-size: 2rem;
+    color: rgba(0,0,0,0.678);
+}
+#processOrderBtn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: crimson;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1.3rem;
+    transition: 0.5s linear;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
+}
+#processOrderBtn:hover{
+    background-color: rgb(34, 33, 33);
+}
+.swal2-popup {
+    font-size: 20px;
+}
+
+@media (max-width:1270px) {
+    .processOrderPage{
+        grid-template-columns: 1fr;
+    }
+    .processOrderPage>div:first-child {
+        border-right: 0.1rem solid black;
+        margin-bottom: 10rem;
+    }
+    .processOrderPage > div:last-child{
+        border-left: 0.1rem solid black;
+        width: 80%;
+        margin: auto;
+    }
+}
+@media (max-width:860px) {
+    .processOrderContainer {
+        width: 100vw;
+    }
+    .processOrderContainer{
+        border-top: 0.1rem solid black;
+    }
+}
+@media (max-width:568px) {
+    .processShippingArea,
+    .processCartItems{
+        padding: 0;
+        margin-left: 5rem;
+    }
+    .processShippingArea > p,
+    .processCartItems > p{
+        font-size: 4rem;
+    }
+    .processCartItemsContainer{
+        margin: 3rem 2rem;
+    }
+    .processCartItemsContainer div{
+        font-size: 2.5rem;
+    }
+    .processCartItemsContainer div a{
+        font-size: 2rem;
+    }
+    .processCartItemsContainer div span{
+        font-size: 2rem;
+    }
+    .processOrderForm h1{
+        font-size: 4rem;
+    }
+    .processOrderForm div svg{
+        font-size: 2.5rem;
+    }
+    #processOrderBtn{
+        font-size: 3rem;
+    }
+
+}

@@ -1,0 +1,222 @@
+.emptyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    height: 70vh;
+    box-sizing: border-box;
+    background-color: skyblue;
+}
+.emptyCart svg{
+    font-size: 12rem;
+    margin-bottom: 2rem;
+    color: crimson;
+}
+.emptyCart p{
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    color: rgb(34,33,33);
+    font-family: 'Gill Sans','Gill Sans MT',Calibri , 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.emptyCart a{
+    background-color: crimson;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 2rem 3.5rem;
+    transition: all 0.5s;
+}
+.emptyCart a:hover{
+    background-color: rgb(34,33,33);
+    color: white;
+}
+.cartPage{
+    padding: 8rem;
+    background-color: skyblue;
+}
+.cartHeader{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    background-color: crimson;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: white;
+    border: 0.1rem solid black;
+}
+.cartHeader p{
+    margin: 1rem;
+}
+.cartHeader p:last-child{
+    text-align: end;
+}
+.cartContainer{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    padding: 0 2rem;
+    grid-template-columns: 4fr 1fr 1fr;
+    background-color: white;
+    border-left: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+}
+.cartInput{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+}
+.cartInput button{
+    background-color: rgba(0,0,0,0.616);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 1.5rem;
+    font-size: 2rem;
+    transition: 0.5s linear;
+}
+.cartInput button:hover{
+    background-color: rgba(0,0,0,0.767);
+}
+.cartInput input{
+    border: none;
+    color: rgba(0,0,0,0.74);
+    width: 3rem;
+    padding: 0.9rem;
+    outline: none;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.cartSubtotal{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 10rem;
+    box-sizing: border-box;
+    padding: 0.9rem;
+    color: rgba(0,0,0,0.753);
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.cartGrossProfit{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 5rem;
+    border: 0.1rem solid black;
+    border-top: none;
+}
+.cartGrossProfitBox{
+    border-top: 0.3rem solid crimson;
+    box-sizing: border-box;
+    margin: 1.7rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.cartGrossProfitBox p{
+    font-size: 2.8rem;
+    margin-left: 1rem;
+}
+.cartGrossProfitBox p.price{
+    margin-right: 3rem;
+}
+.checkOutBtn{
+    display: flex;
+    justify-content: flex-end;
+}
+.checkOutBtn button{
+    border: none;
+    background-color: rgb(34,33,33);
+    color: white;
+    border-radius: 3rem;
+    padding: 1.3rem 3rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 60%;
+    margin-right: 6rem;
+    cursor: pointer;
+}
+@media (max-width:950px) {
+    .cartGrossProfit{
+        grid-template-columns: 2fr 2fr;
+    }
+    .checkOutBtn button{
+        width: 65%;
+    }
+}
+@media (max-width:785px) {
+    .cartPage{
+        padding-bottom: 25rem;
+    }
+    .cartGrossProfit{
+        grid-template-columns: 0 1fr;
+
+    }
+    .checkOutBtn button{
+        width: 80%;
+    }
+    .cartContainer {
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width:568px) {
+    .cartContainer{
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+    .emptyCart svg{
+        font-size: 12.5rem;
+    }
+    .emptyCart p{
+        font-size: 5.5rem;
+    }
+    .emptyCart a{
+        font-size: 3rem;
+    }
+    .cartPage{
+        padding: 2rem;
+        padding-top: 20rem;
+        min-height: 80vh;
+    }
+    .cartHeader{
+        font-size: 3rem;
+    }
+    .cartInput button{
+        font-size: 2.5rem;
+    }
+    .cartInput input{
+        font-size: 2.3rem;
+    }
+    .cartSubtotal{
+        font-size: 3rem;
+    }
+    .cartGrossProfitBox{
+        font-size: 2.3rem;
+    }
+    .cartGrossProfitBox p{
+        font-size: 3.3rem;
+    }
+    .checkOutBtn button{
+        font-size: 3rem;
+    }
+} 
+@media (max-width:440px) {
+    .cartPage{
+        padding-top: 20rem;
+        min-height: 90vh;
+    }
+}

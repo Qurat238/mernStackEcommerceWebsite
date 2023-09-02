@@ -1,0 +1,95 @@
+.dashboard{
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.dashboardContainer{
+    width: 80vw;
+    background-color: rgb(255,255,255);
+    border-left: 1px solid rgba(0,0,0,0.13);
+    background-color: white;
+}
+.dashboardContainer > h1{
+    font: 900 7rem 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+    color: crimson;
+    width: 30%;
+}
+.dashboardSummary > div{
+    display: flex;
+    justify-content: center;
+}
+.dashboardSummary > div > p{
+    font-size: 2.7rem;
+    color: crimson;
+    padding: 1.5rem;
+    margin: 0 8rem;
+    text-align: center;
+    background-color: skyblue;
+    width: 100%;
+    font-weight: 600;
+}
+.dashboardSummaryBox2 > a{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+    padding: 1.5rem;
+    text-decoration: none;
+    background-color: rgb(34,33,33);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 3rem;
+}
+.lineChart{
+    width: 100%;
+    padding: 0 30%;
+}
+.doughnutChart{
+    margin: auto;
+    width: 100%;
+    height: 60%;
+    padding: 0 40%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+@media (max-width:860px) {
+    .dashboard{
+        grid-template-columns: 1fr;
+    }
+    .dashboardContainer{
+        width: 100vw;
+        border-left: none;
+        border-top: 0.1rem solid black;
+    }
+}
+@media (max-width:568px) {
+    .dashboardContainer > h1{
+        font-size: 3.5rem;
+    }
+    .dashboardSummary > div > p{
+        font-size: 2.5rem;
+    }
+    .dashboardSummaryBox2 > a{
+        font-size: 3rem;
+    }
+    .lineChart {
+        padding: 0 20%;
+    }
+    .doughnutChart {
+        height: 70%;
+        padding: 0 20%;
+    }
+}

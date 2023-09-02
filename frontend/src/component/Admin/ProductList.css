@@ -1,0 +1,60 @@
+.noProductsAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: skyblue;
+}
+.noProductsAdmin p{
+    font: 900 7rem 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.productListContainer{
+    background-color: rgb(255,255,255);
+    border-left: 1px solid rgba(0,0,0,0.13);
+    width: 80vw;
+    background-color: skyblue;
+    padding-top: 10rem;
+}
+#productListHeading{
+    font: 900 7rem 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    width: 45%;
+}
+table{
+    table-layout: fixed;
+}
+.id{
+    font-size: 0.9rem;
+}
+button:hover{
+    color: tomato;
+}
+.swal2-popup {
+    font-size: 20px;
+}
+@media (max-width:860px) {
+    .productListContainer{
+        width: 100vw;
+        border-top: 0.1rem solid black;
+        padding-bottom: 10rem;
+    }
+}
+@media (max-width:568px) {
+    .noProductsAdmin p{
+        font-size: 5.5rem;
+    }
+    #productListHeading{
+        font-size: 3.5rem;
+    }
+    .id{
+        font-size: 1.4rem;
+    }
+}

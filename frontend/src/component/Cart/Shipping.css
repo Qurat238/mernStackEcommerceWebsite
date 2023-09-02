@@ -1,0 +1,168 @@
+.shippingContainer{
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+    padding-bottom: 8rem;
+    margin-top: 5rem;
+    padding-top: 10rem;
+}
+.shippingBox{
+    width: 27vw;
+    height: 90vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: white;
+    border: 0.1rem solid black;
+}
+.shippingHeading{
+    color: rgba(0,0,0,0.664);
+    text-align: center;
+    border-bottom: 0.1rem solid rgba(0,0,0,1);
+    width: 70%;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 2.4rem;
+    margin-bottom: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.shippingForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    transition: 0.5s all;
+}
+.shippingForm div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.shippingForm div input,
+.shippingForm div select{
+    font-size: 2rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0.1rem solid black;
+    outline: none;
+    border-radius: 0.4rem;
+    padding: 1rem 4rem;
+    padding-right: 1rem;
+    margin-bottom: 2.5rem;
+    color: rgba(0,0,0,0.678);
+}
+.shippingForm div svg{
+    position: absolute;
+    transform: translateX(1rem) translateY(-1rem);
+    font-size: 2.5rem;
+    color: crimson;
+}
+.shippingBtn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: crimson;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1.3rem;
+    transition: 0.5s linear;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
+}
+.shippingBtn:hover{
+    background-color: rgb(179,66,46);
+}
+.swal2-popup {
+    font-size: 20px;
+}
+@media (max-width:1650px) {
+    .shippingBox{
+        width: 30vw;
+    }
+}
+@media (max-width:1500px) {
+    .shippingBox{
+        width: 32vw;
+    }
+}
+@media (max-width:1350px) {
+    .shippingBox{
+        width: 35vw;
+    }
+}
+@media (max-width:1200px) {
+    .shippingBox{
+        width: 40vw;
+    }
+}
+@media (max-width:1000px) {
+    .shippingBox{
+        width: 45vw;
+    }
+}
+@media (max-width:998px) {
+    .shippingBox {
+        height: 80vh;
+    }
+}
+@media (max-width:900px) {
+    .shippingBox{
+        width: 50vw;
+    }
+}
+@media (max-width:768px) {
+    .shippingBox{
+        height: 67vh;
+    }
+}
+@media (max-width:650px) {
+    .shippingBox {
+        width: 60vw;
+    }
+}
+@media (max-width:585px) {
+    .shippingContainer{
+        padding-top: 10rem;
+    }
+}
+@media (max-width:568px) {
+    .shippingContainer{
+        padding-bottom: 10rem;
+    }
+    .shippingBox{
+        height: 57vh;
+    }
+    .shippingBox div input{
+        font-size: 2.5rem;
+    }
+    .shippingBtn{
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+}
+@media (max-width:440px) {
+    .shippingContainer{
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+    }
+    .shippingBox{
+        height: 50vh;
+    }
+}
+@media (max-width:368px) {
+    .shippingContainer{
+        padding-top: 25rem;
+        padding-bottom: 25rem;
+    }
+    /* .shippingBox {
+        height: 45vh;
+    } */
+}
+

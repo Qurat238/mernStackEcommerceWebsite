@@ -1,0 +1,25 @@
+.stepper{
+    padding: 4rem 0;
+    background-color: crimson;
+}
+.MuiStepConnector-line{
+    display: none !important;
+}
+.MuiStepConnector-root{
+    height: 0.3rem;
+    background-color: rgba(0,0,0,0.349);
+}
+.MuiStepConnector-active,
+.MuiStepConnector-completed{
+    background-color: tomato;
+}
+.icon{
+    transform: scale(2.5);
+}
+.stepper p{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+

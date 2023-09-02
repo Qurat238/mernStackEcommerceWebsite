@@ -1,0 +1,111 @@
+.orderDetailsPage{
+    background-color: skyblue;
+    padding: 5%;
+}
+.orderDetailsContainer{
+    padding: 3rem 10rem;
+    padding-top: 5rem;
+    background-color: white;
+    border: 0.1rem solid black;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.orderDetailsContainer > p{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.orderDetailsContainer > h1{
+    color: tomato;
+    font-size: 3rem;
+}
+.orderDetailsContainerBox{
+    padding: 3rem 6rem;
+}
+.orderDetailsContainerBox > div{
+    display: flex;
+    margin: 2rem 0;
+    align-items: center;
+}
+.orderDetailsContainerBox div p{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.orderDetailsContainerBox div span{
+    margin: 0 2rem;
+    font-size: 2rem;
+    color: #575757;
+}
+.orderDetailsCartItems{
+    padding: 0 10rem;
+    background-color: white;
+    border: 0.1rem solid black;
+    border-top: none;
+}
+.orderDetailsCartItems p{
+    font-size: 3.5rem;
+    font-weight: 500;
+    padding-top: 3rem;
+}
+.orderDetailsCartItemsContainer{
+    max-height: 30rem;
+    overflow-y: auto;
+    margin: 3rem 6rem;
+    padding-bottom: 7rem;
+}
+.orderDetailsCartItemsContainer div img{
+    margin: 2rem 0;
+    width: 7rem;
+}
+.orderDetailsCartItemsContainer div{
+    display: grid;
+    grid-template-columns: 2fr 3fr 4fr;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.orderDetailsCartItemsContainer div a{
+    color: #575757;
+    text-decoration: none;
+    cursor: pointer;
+}
+.orderDetailsCartItemsContainer div span{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.swal2-popup {
+    font-size: 20px;
+}
+@media (max-width:568px) {
+    .orderDetailsContainer> p{
+        font-size: 4rem;
+    }
+    .orderDetailsContainerBox div p{
+        font-size: 3rem;
+    }
+    .orderDetailsContainerBox div span{
+        font-size: 2.5rem;
+    }
+    .orderDetailsCartItemsContainer {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .orderDetailsCartItems p{
+        font-size: 4rem;
+    }
+    .orderDetailsCartItemsContainer div{
+        font-size: 2.5rem;
+    }
+    .orderDetailsCartItemsContainer div span{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:490px) {
+    .orderDetailsPage{
+        padding-top: 20rem;
+    }
+}
+@media (max-width:369px) {
+    .orderDetailsPage{
+        padding-bottom: 20rem;
+    }
+}

@@ -1,0 +1,166 @@
+.paymentContainer{
+    display: grid;
+    place-items: center;
+    padding: 8rem 0;
+    background-color: skyblue;
+    margin-top: 5rem;
+}
+.paymentForm{
+    width: 30%;
+    height: 65vh;
+    border: 0.1rem solid black;
+    background-color: white;
+    padding: 0 5rem;
+    padding-bottom: 5rem;
+}
+.paymentForm > p{
+    color: rgba(0,0,0,0.664);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.205);
+    width: 80%;
+    margin: auto;
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.paymentForm > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.paymentInput{
+    font-size: 2rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0.1rem solid black;
+    outline: none;
+    border-radius: 0.4rem;
+    padding: 2rem 4rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
+}
+.paymentForm div svg{
+    position: absolute;
+    transform: translateX(1rem) translateY(1rem);
+    font-size: 2.5rem;
+    color: crimson;
+}
+.paymentFormBtn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: crimson;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    transition: 0.5s linear;
+    margin-top: 2rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
+}
+.paymentFormBtn:hover{
+    background-color: black;
+}
+.swal2-popup {
+    font-size: 20px;
+}
+@media (max-width:1200px) {
+    .paymentForm{
+        width: 30%;
+    }
+    .paymentForm > p{
+        font-size: 2.9rem;
+    }
+    .paymentFormBtn{
+        font: 300 2rem "Roboto";
+    }
+}
+@media (max-width:1050px) {
+    .paymentForm{
+        width: 40%;
+    }
+}
+@media (max-width:1030px) {
+    .paymentForm>p {
+        width: 90%;
+    }
+}
+@media (max-width:1000px) {
+    .paymentForm{
+        width: 35%;
+    }
+}
+@media (max-width:850px) {
+    .paymentForm{
+        width: 40%;
+    }
+}
+@media (max-width:768px) {
+    .paymentForm{
+        height: 55vh;
+    }
+}
+@media (max-width:750px) {
+    .paymentForm{
+        width: 45%;
+    }
+}
+@media (max-width:650px) {
+    .paymentForm{
+        width: 55%;
+    }
+}
+@media (max-width:585px) {
+    .paymentContainer{
+        padding-top: 10rem;
+    }
+}
+@media (max-width:568px) {
+    .paymentContainer{
+        padding-top: 15rem;
+        padding-bottom: 20rem;
+    }
+    .paymentForm{
+        width: 65%;
+        height: 50vh;
+    }
+    .paymentForm > p{
+        font-size: 5rem;
+    }
+    .paymentInput{
+        font-size: 2.5rem;
+        padding-left: 6rem;
+    }
+    .paymentForm div svg{
+        font-size: 3.5rem;
+    }
+    .paymentFormBtn{
+        font-size: 4rem;
+    }
+}
+@media (max-width:500px) {
+    .paymentForm{
+        width: 80%;
+    }
+}
+@media (max-width:440px) {
+    .paymentContainer{
+        padding-top: 23rem;
+        padding-bottom: 28rem;
+    }
+    .paymentForm{
+        height: 45vh;
+    }
+}
+@media (max-width:368px) {
+    .paymentContainer{
+        padding-top: 40rem;
+        padding-bottom: 40rem;
+    }
+    
+}

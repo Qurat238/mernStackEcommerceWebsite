@@ -1,0 +1,51 @@
+.orderSuccess{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: skyblue;
+}
+.orderSuccess svg {
+    font-size: 12rem;
+    color: crimson;
+    margin-bottom: 2rem;
+}
+.orderSuccess p{
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    color: rgb(34, 33, 33);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.orderSuccess a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    margin: 2rem;
+    color: white;
+    background-color: crimson;
+    padding: 2rem 3.5rem;
+    transition: all 0.5s;
+}
+.orderSuccess a:hover{
+    background-color: rgb(34, 33, 33);
+    color: white;
+}
+
+@media (max-width:568px){
+    .orderSuccess p{
+        font-size: 4.5rem;
+    }
+    .orderSuccess svg{
+        font-size: 8.5rem;
+    }
+    .orderSuccess a{
+        font-size: 3rem;
+    }
+}

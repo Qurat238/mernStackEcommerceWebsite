@@ -1,0 +1,143 @@
+.newProductContainer{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(0,0,0,0.158);
+    background-color: skyblue;
+    height: 100vh;
+}
+.newProductContainer h1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(0,0,0,0.733);
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.createProductForm{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 4rem 6rem;
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 0 0.1rem rgba(0,0,0,0.267);
+    border: 0.1rem solid black;
+}
+.createProductForm div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.createProductForm div input,
+.createProductForm div select,
+.createProductForm div textarea{
+    font-size: 2rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0.1rem solid black;
+    outline: none;
+    border-radius: 0.4rem;
+    padding: 1.5rem 4rem;
+    padding-right: 1rem;
+}
+.createProductForm div svg{
+    position: absolute;
+    transform: translateX(1rem);
+    font-size: 2rem;
+    color: crimson;
+}
+#createProductFormFile input{
+    display: flex;
+    padding: 1rem 0.5rem;
+    margin-left: 0.5rem;
+}
+#createProductFormImage{
+    width: 100%;
+    overflow: auto;
+}
+#createProductFormImage img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    margin: 0 0.5rem;
+    object-fit: contain;
+}
+#createProductBtn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: crimson;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1.3rem;
+    transition: 0.5s linear;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
+}
+#createProductBtn:hover{
+    background-color: rgb(34, 33, 33);
+}
+.swal2-popup {
+    font-size: 20px;
+}
+@media (max-width:1200px) {
+    .createProductForm{
+        width: 60%;
+    }
+}
+
+@media (max-width:860px) {
+    .newProductContainer{
+        height: 130vh;
+        padding: 5rem;
+        border-top: 0.1rem solid black;
+    }
+    .createProductForm{
+        width: 80%;
+        margin-top: 20rem;
+    }
+}
+@media (max-width:769px) {
+    .newProductContainer{
+        margin-bottom: -20rem;
+    }
+    .createProductForm{
+        height: 60%;
+    }
+}
+@media (max-width:568px) {
+    .newProductContainer{
+        margin-bottom: -50rem;
+    }
+    .newProductContainer h1{
+        font-size: 3.5rem;
+    }
+    .createProductForm{
+        height: 50%;
+    }
+    .createProductForm div input,
+    .createProductForm div select,
+    .createProductForm div textarea{
+       font-size: 2.5rem;
+    }
+    #createProductBtn{
+        font-size: 3rem;
+    } 
+}
+@media (max-width:370px) {
+    .createProductForm{
+        height: 50%;
+    }
+}
+
+
+
+

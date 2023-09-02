@@ -1,0 +1,111 @@
+.aboutPage{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    position: fixed;
+    background-color: skyblue;
+}
+.aboutPageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(255,255,255);
+    box-shadow: -10px 10px 10px 10px rgba(0,0,0,0.192);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.aboutPageContainer > h1{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: skyblue;
+    font: 900 6rem 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: crimson;
+    color: skyblue;
+}
+.aboutPageContainer > div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.aboutPageContainer > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+.aboutPageContainer > div > div > div{
+    display: flex;
+    align-items: center;
+}
+.aboutPageContainer>div>div>button {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: crimson;
+}
+.aboutPageContainer > div > div .email{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.name{
+    margin-bottom: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+}
+.aboutPageContainer2{
+    border-left: 0.2rem solid black;
+}
+.aboutPageContainer2 > h2{
+    font: 600 5rem 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 2rem 0;
+    margin-top: 0;
+}
+.aboutPageContainer2 > a > svg{
+    font-size: 7rem;
+    color: crimson;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .aboutPageContainer{
+        height: 80vh;
+    }
+}
+@media (max-width:568px) {
+    .aboutPageContainer > h1{
+        font-size: 4.5rem;
+        padding: 4rem 0;
+    }
+    .aboutPageContainer > div > div > p{
+        font-size: 3.5rem;
+    }
+    .aboutPageContainer > div > div > button{
+        font-size: 2rem;
+    }
+    .aboutPageContainer > div > div > span{
+        font-size: 2rem;
+    }
+    .aboutPageContainer2 > h2{
+        font-size: 3.5rem;
+    }
+}
+@media (max-width:440px) {
+    .aboutPageContainer{
+        height: 80vh;
+    }
+    .aboutPageContainer > h1{
+        padding: 5rem 0;
+    }
+}
