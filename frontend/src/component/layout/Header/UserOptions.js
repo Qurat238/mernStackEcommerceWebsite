@@ -50,9 +50,17 @@ const UserOptions = ({user}) => {
         Swal.fire({
             text: 'Logged Out Successfully',
             icon: 'success',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
         });
     }
+
+    const getTooltipStyle = () => {
+        const laptopStyle = {fontSize:'2rem'};
+        const mobileStyle = {fontSize:'4rem'};
+        return window.innerWidth <= 568 ? {...laptopStyle, ...mobileStyle} : laptopStyle;
+    }
+
 
     return(
         <Fragment>
@@ -72,7 +80,7 @@ const UserOptions = ({user}) => {
                       />}
             >
                 {options.map((item) => (
-                    <SpeedDialAction key={item.name} icon={item.icon} tooltipTitle={<span style={{ fontSize: '20px' }}>{item.name}</span>} onClick={item.func}/>
+                    <SpeedDialAction key={item.name} icon={item.icon} tooltipTitle={<span style={getTooltipStyle()}>{item.name}</span>} onClick={item.func}/>
                 ))}
             </SpeedDial>
         </Fragment>

@@ -38,6 +38,7 @@
     min-height: 60rem;
     margin-bottom: 10rem;
     padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 .paginationBox{
     display: flex;
@@ -124,7 +125,7 @@
     font-weight: 600;
 }
 .swal2-popup {
-    font-size: 20px;
+    font-size: 2.5rem;
 }
 @media (max-width:1210px) {
     .productsFiltering {
@@ -185,14 +186,20 @@
     .productsFiltering .categorySection p{
         font-size: 3rem;
     }
+    .productsFiltering .categorySection .categoryBox{
+        margin-bottom: 4rem;
+    }
     .productsFiltering .categorySection .categoryBox .category-link{
         font-size: 2.5rem;
     }
     .productsFiltering .categorySection fieldset{
         padding: 0.5rem 2rem;
+        margin-bottom: 4rem;
+
     }
     .productsFiltering .categorySection fieldset legend{
         font-size: 3rem;
+        font-weight: 900;
     }
 }
 @media (max-width:330px) {
@@ -209,7 +216,6 @@
     }
     .productsFiltering .categorySection fieldset legend {
         font-size: 2rem;
-        font-weight: 600;
     }
     .page-item {
         padding: 1.2rem 2.2rem;

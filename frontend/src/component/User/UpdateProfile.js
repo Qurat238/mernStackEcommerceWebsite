@@ -51,7 +51,8 @@ const UpdateProfile = () => {
             Swal.fire({
                 text: error,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         } 
@@ -59,7 +60,8 @@ const UpdateProfile = () => {
             Swal.fire({
                 text: 'Profile Updated Successfully',
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(loadUser());
             navigate("/account");

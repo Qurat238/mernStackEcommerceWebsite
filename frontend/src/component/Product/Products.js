@@ -34,12 +34,23 @@ const Products = () => {
 
     const keyword = params.keyword;
 
+    const categories = [
+        "Tops",
+        "Bottoms",
+        "Hand Bags",
+        "Shoes",
+        "Rings",
+        "Wrist Watches",
+        "Tracksuits"
+    ];
+
     useEffect(()=>{
         if(error){
             Swal.fire({
                 text: error,
                 icon: 'error', 
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         }
@@ -84,18 +95,16 @@ const Products = () => {
                                 <div className="categorySection">
                                     <p>Categories</p>
                                     <ul className="categoryBox">
-                                        {products && products.map((product,index) => {
-                                            const categoryExists = products.slice(0,index).some(item => item.category === product.category);
-                                            if(categoryExists){
-                                                return null;
-                                            }
-                                            return <li 
-                                                key={index}
-                                                className="category-link"
-                                                onClick={() => setCategory(product.category)}
-                                            >
-                                                {product.category}
-                                            </li>
+                                        {categories.map((category, index) => {
+                                            return (
+                                                <li
+                                                    key={index}
+                                                    className="category-link"
+                                                    onClick={() => setCategory(category)}
+                                                >
+                                                    {category}
+                                                </li>
+                                            );
                                         })}
                                     </ul>
                                     <fieldset>

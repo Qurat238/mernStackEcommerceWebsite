@@ -212,7 +212,7 @@
   font-size: 1.5rem; 
 }
 .swal2-popup {
-    font-size: 20px;
+    font-size: 2.5rem !important;
 }
 @media (max-width:900px) {
     .ProductDetails{

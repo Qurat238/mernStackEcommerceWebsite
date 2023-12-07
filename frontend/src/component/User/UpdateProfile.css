@@ -13,7 +13,7 @@
 .updateProfileBox{
     background-color: white;
     width: 30vw;
-    height: 65vh;
+    height: 75vh;
     box-sizing: border-box;
     overflow: hidden;
     border: 0.1rem solid black;
@@ -21,7 +21,6 @@
 .updateProfileBox h1{
     color: rgba(0,0,0,0.664);
     text-align: center;
-    border-bottom: 0.1rem solid rgba(0,0,0,0.205);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 60%;
     margin: auto;
@@ -47,19 +46,18 @@
 }
 .updateProfileForm div input{
     font-size: 2rem;
-    font-weight: 300;
     box-sizing: border-box;
     width: 100%;
-    border: 0.1rem solid rgba(0,0,0,0.267);
+    border: 0.1rem solid black;
     outline: none;
     border-radius: 0.4rem;
-    padding: 1.5rem 4rem;
+    padding: 2rem 4rem;
     padding-right: 1rem;
 }
 .updateProfileForm div svg{
     position: absolute;
     transform: translateX(1rem);
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: crimson;
 }
 #updateProfileImage img{
@@ -91,7 +89,7 @@
     background-color: rgb(34, 33, 33);
 }
 .swal2-popup {
-    font-size: 20px;
+    font-size: 2.5rem;
 }
 
 @media (max-width:1650px) {
@@ -127,7 +125,7 @@
 }
 @media (max-width:768px) {
     .updateProfileBox{
-        height: 55vh;
+        height: 65vh;
     }
     .updateProfileForm div input{
         font-size: 2.5rem;
@@ -143,6 +141,24 @@
 @media (max-width:650px) {
     .updateProfileBox{
         width: 60vw;
+    }
+}
+@media (max-width:568px) {
+    .updateProfileBox{
+        height: 50vh;
+    }
+    .updateProfileBox h1{
+        font-size: 3.4rem;
+    }
+    .updateProfileForm div input{
+        font-size: 2.5rem;
+        padding-left: 6rem;
+    }
+    .updateProfileForm div svg{
+        font-size: 3.5rem;
+    }
+    .updateProfileBtn{
+        font-size: 4rem;
     }
 }
 @media (max-width:450px) {

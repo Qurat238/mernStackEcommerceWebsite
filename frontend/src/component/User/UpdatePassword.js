@@ -35,7 +35,8 @@ const UpdatePassword = () => {
             Swal.fire({
                 text: error,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         } 
@@ -43,7 +44,8 @@ const UpdatePassword = () => {
             Swal.fire({
                 text: 'Password Updated Successfully',
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             navigate("/account");
             dispatch({

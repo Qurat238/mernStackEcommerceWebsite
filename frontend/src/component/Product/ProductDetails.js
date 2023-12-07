@@ -43,7 +43,8 @@ const ProductDetails = () => {
         Swal.fire({
             text: "Item added to cart",
             icon: 'success',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
         });
     }
 
@@ -65,7 +66,8 @@ const ProductDetails = () => {
             Swal.fire({
                 text: error,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         }
@@ -73,7 +75,8 @@ const ProductDetails = () => {
             Swal.fire({
                 text: reviewError,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         }
@@ -81,7 +84,8 @@ const ProductDetails = () => {
             Swal.fire({
                 text: 'Review Submitted Successfully',
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch({type: NEW_REVIEW_RESET});
         }

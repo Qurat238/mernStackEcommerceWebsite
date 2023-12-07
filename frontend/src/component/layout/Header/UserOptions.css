@@ -9,10 +9,11 @@
     border-radius: 100%;
 }
 .icon{
-    transform: scale(1.3);
+    /* transform: scale(1.3); */
+    font-size: 1.5rem !important;
 }
 .swal2-popup {
-    font-size: 20px;
+    font-size: 2.5rem;
 }
 @media (max-width:999px) {
     .speedDialIcon{
@@ -28,6 +29,9 @@
     .speedDial {
         top: 2rem;
         right: 2rem;
+    }
+    .icon{
+        font-size: 3rem !important;
     }
 }
 @media (max-width:441px) {

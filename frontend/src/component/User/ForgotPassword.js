@@ -27,7 +27,8 @@ const ForgotPassword = () => {
             Swal.fire({
                 text: error,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         }
@@ -35,7 +36,8 @@ const ForgotPassword = () => {
             Swal.fire({
                 text: message,
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });;
         }
     },[dispatch,error,message, Swal]);

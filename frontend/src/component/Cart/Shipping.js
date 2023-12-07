@@ -33,7 +33,8 @@ const Shipping = () => {
             Swal.fire({
                 text: "Phone No should be 10 digits long",
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             return;
         }

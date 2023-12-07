@@ -13,7 +13,7 @@
 .LoginSignupBox{
     background-color: white;
     width: 27vw;
-    height: 70vh;
+    height: 85vh;
     box-sizing: border-box;
     overflow: hidden;
     border: 0.1rem solid black;
@@ -24,7 +24,7 @@
 }
 .login_signup_toggle p{
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -71,22 +71,21 @@
 .loginForm div input,
 .signupForm div input{
     font-size: 2rem;
-    font-weight: 300;
     box-sizing: border-box;
     width: 100%;
     border: 0.1rem solid black;
     outline: none;
     border-radius: 0.4rem;
-    padding: 1.5rem 4rem;
+    padding: 2rem 4rem;
     padding-right: 1rem;
-    margin: 0.5rem;
+    margin-top: 0.5rem;
 }
 .loginForm div svg,
 .signupForm div svg{
     position: absolute;
     transform: translateX(1rem);
-    font-size: 2rem;
-    color: rgba(0,0,0,0.678);
+    font-size: 2.5rem;
+    color: crimson;
 }
 .loginForm a{
     font-size: 2.5rem;
@@ -110,6 +109,7 @@
     display: flex;
     padding: 1rem 0.5rem;
     margin-left: 0.5rem;
+    margin-bottom: 1rem;
 }
 .loginBtn,
 .signupBtn{
@@ -123,7 +123,7 @@
     color: white;
     cursor: pointer;
     border-radius: 0.4rem;
-    padding: 1.3rem;
+    padding: 1.8rem;
     transition: 0.5s linear;
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
 }
@@ -144,7 +144,7 @@
     transform: translateX(100%);
 }
 .swal2-popup {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 @media (max-width:1650px) {
@@ -172,6 +172,7 @@
 @media (max-width:1000px) {
     .LoginSignupBox{
         width: 45vw;
+        height: 75vh;
     }
 }
 @media (max-width:900px) {
@@ -182,13 +183,13 @@
 @media (max-width:800px) {
     .LoginSignupBox{
         width: 60vw;
-        height: 60vh;
+        height: 75vh;
     }
 } 
 @media (max-width:770px) {
     .LoginSignupBox{
         width: 60vw;
-        height: 60vh;
+        height: 80vh;
     }
     .signupForm div:first-child{
         margin-top: 7rem;
@@ -205,12 +206,20 @@
         padding: 2rem 4rem;
     }
 }
+@media (max-width:768px) {
+    .LoginSignupBox{
+        height: 70vh;
+    }
+}
 @media (max-width:650px) {
     .LoginSignupBox{
         width: 70vw;
     }
 }
 @media (max-width: 568px) {
+    .LoginSignupBox{
+        height: 60vh;
+    }
     .login_signup_toggle{
         height: 8rem;
     }
@@ -226,7 +235,7 @@
     }
     .loginForm div svg,
     .signupForm div svg{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     .loginForm a{
         font-size: 3rem;
@@ -234,12 +243,13 @@
     }
     .loginBtn,
     .signupBtn{
-        font-size: 3rem;
+        font-size: 4rem;
         margin-top: 3rem;
     }
     .loginForm div input,
     .signupForm div input{
-        padding: 2.5rem 4rem;
+        padding-left: 6rem;
+        
     }
 }
 @media (max-width:440px) {

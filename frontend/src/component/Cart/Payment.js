@@ -80,7 +80,8 @@ const Payment = () =>{
                 Swal.fire({
                     text: result.error.message,
                     icon: 'error',
-                    confirmButtonText: 'Ok'
+                    confirmButtonText: 'Ok',
+                    customClass: 'swal-wide'
                 });
             }else{
                 if(result.paymentIntent.status === "succeeded"){
@@ -99,7 +100,8 @@ const Payment = () =>{
             Swal.fire({
                 text: error.message,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             console.log(error.message);
         }
@@ -110,7 +112,8 @@ const Payment = () =>{
             Swal.fire({
                 text: error,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             dispatch(clearErrors());
         }

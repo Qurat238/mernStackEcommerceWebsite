@@ -4,7 +4,7 @@
     max-width: 100%;
     display: flex;
     background-color: skyblue;
-    padding: 5%;
+    padding: 3%;
 }
 .profileContainer > div:first-child{
     display: flex;
@@ -130,7 +130,11 @@
         width: 80%;
         border-top: none;
         border-left: 0.1rem solid black;
-        padding-bottom: 5rem;
+        padding-bottom: 10rem;
+        padding-left: 12%;
+    }
+    .profileContainer > div:last-child div:last-child a{
+        width: 100%;
     }
 }
 @media (max-width:568px) {
