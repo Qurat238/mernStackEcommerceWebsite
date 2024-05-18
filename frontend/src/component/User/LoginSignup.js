@@ -1,6 +1,6 @@
 import React, { Fragment , useRef , useState, useEffect } from "react";
 import {Link} from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
@@ -11,6 +11,7 @@ import "./LoginSignup.css";
 import Swal from 'sweetalert2';
 
 const LoginSignup = () => {
+    const location = useLocation();    
     const loginTab = useRef(null);
     const registerTab = useRef(null);
     const switcherTab = useRef(null);
@@ -57,7 +58,12 @@ const LoginSignup = () => {
         }
     }
 
+    const redirect = location.search ? location.search.split("=")[1] : "/account";
+
     useEffect(() => {
+        if(isAuthenticated){
+            navigate(redirect);
+        }
         if(error){
             Swal.fire({
                 text: error,
@@ -67,7 +73,7 @@ const LoginSignup = () => {
             });
             dispatch(clearErrors());
         }
-    },[navigate, dispatch, error, isAuthenticated, Swal])
+    },[navigate, dispatch, error, isAuthenticated, Swal, redirect])
 
     const switchTabs = (e, tab) => {
         if(tab==="login"){
