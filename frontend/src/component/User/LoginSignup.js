@@ -1,6 +1,6 @@
 import React, { Fragment , useRef , useState, useEffect } from "react";
 import {Link} from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate , useLocation} from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
@@ -9,39 +9,24 @@ import {useDispatch, useSelector} from "react-redux";
 import {clearErrors, login, register} from "../../actions/userAction";
 import "./LoginSignup.css";
 import Swal from 'sweetalert2';
-
 const LoginSignup = () => {
-    const location = useLocation();    
+    const location = useLocation();
     const loginTab = useRef(null);
     const registerTab = useRef(null);
     const switcherTab = useRef(null);
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {error, loading, isAuthenticated} = useSelector(state => state.user);
-
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
-
     const [avatar, setAvatar] = useState();
     const [avatarPreview, setAvatarPreview] = useState("/profile.png");
-
     const [user , setUser] = useState({
         name:"",
         email:"",
         password:""
     })
-
     const {name, email, password} = user;
-
-    useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("Info"));
-        if(user || isAuthenticated){
-            navigate("/account");
-        }
-    }, [navigate])
-    
-
     const registerDataChange = (e) => {
         if(e.target.name === "avatar"){
             const reader = new FileReader();
@@ -57,7 +42,6 @@ const LoginSignup = () => {
             setUser({...user,[e.target.name]:e.target.value});
         }
     }
-
     const redirect = location.search ? location.search.split("=")[1] : "/account";
 
     useEffect(() => {
@@ -73,25 +57,21 @@ const LoginSignup = () => {
             });
             dispatch(clearErrors());
         }
-    },[navigate, dispatch, error, isAuthenticated, Swal, redirect])
-
+    },[navigate, dispatch, error, isAuthenticated, redirect, Swal])
     const switchTabs = (e, tab) => {
         if(tab==="login"){
             switcherTab.current.classList.add("shiftToNeutral");
             switcherTab.current.classList.remove("shiftToRight");
-
             registerTab.current.classList.remove("shiftToNeutralForm");
             loginTab.current.classList.remove("shiftToLeft")
         }
         if(tab==="register"){
             switcherTab.current.classList.add("shiftToRight");
             switcherTab.current.classList.remove("shiftToNeutral");
-
             registerTab.current.classList.add("shiftToNeutralForm");
             loginTab.current.classList.add("shiftToLeft")
         }
     } 
-
     const loginSubmit = (e) => {
         e.preventDefault();
         dispatch(login(loginEmail, loginPassword));
@@ -106,9 +86,7 @@ const LoginSignup = () => {
         myForm.set("avatar", avatar);
         dispatch(register(myForm));
     }
-
   
-
     return(
         <Fragment>
             {loading ? <Loader/> : (
@@ -202,5 +180,4 @@ const LoginSignup = () => {
         </Fragment>
     );
 }
-
 export default LoginSignup;
