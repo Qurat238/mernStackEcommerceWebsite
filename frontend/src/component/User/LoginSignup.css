@@ -13,7 +13,7 @@
 .LoginSignupBox{
     background-color: white;
     width: 27vw;
-    height: 85vh;
+    height: 88vh;
     box-sizing: border-box;
     overflow: hidden;
     border: 0.1rem solid black;
@@ -64,9 +64,6 @@
     width: 100%;
     align-items: center;
     margin-bottom: 0.5rem;
-}
-.signupForm div:first-child{
-    margin-top: 4rem;
 }
 .loginForm div input,
 .signupForm div input{
