@@ -8,7 +8,7 @@ import ProductDetails from "./component/Product/ProductDetails.js";
 import Products from "./component/Product/Products.js";
 import About from './component/layout/About/About';
 import Search from "./component/Product/Search.js";
-import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Navigate, useNavigate} from "react-router-dom";
 import LoginSignup from './component/User/LoginSignup';
 import {useDispatch, useSelector} from "react-redux";
 import { loadUser } from './actions/userAction';
@@ -41,6 +41,7 @@ import NotFound from "./component/layout/NotFound/NotFound.js";
 
 function App() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const {loading, user, isAuthenticated} = useSelector((state) => state.user);
   const [stripeApiKey, setStripeApiKey] = useState("");
@@ -86,6 +87,13 @@ function App() {
       return <Navigate to="/login" />;
     }
   }
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("Info"));
+    if(user){
+        navigate("/account");
+    }
+}, [navigate])
   
   useEffect(() => {
     dispatch(loadUser());

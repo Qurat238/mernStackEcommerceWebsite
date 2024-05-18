@@ -1,6 +1,6 @@
 import React, { Fragment , useRef , useState, useEffect } from "react";
 import {Link} from "react-router-dom";
-import { useNavigate , useLocation} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
@@ -11,7 +11,6 @@ import "./LoginSignup.css";
 import Swal from 'sweetalert2';
 
 const LoginSignup = () => {
-    const location = useLocation();
     const loginTab = useRef(null);
     const registerTab = useRef(null);
     const switcherTab = useRef(null);
@@ -34,6 +33,14 @@ const LoginSignup = () => {
 
     const {name, email, password} = user;
 
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("Info"));
+        if(user){
+            navigate("/account");
+        }
+    }, [navigate])
+    
+
     const registerDataChange = (e) => {
         if(e.target.name === "avatar"){
             const reader = new FileReader();
@@ -51,10 +58,6 @@ const LoginSignup = () => {
     }
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("Info"));
-        if(user || isAuthenticated){
-            navigate("/account");
-        }
         if(error){
             Swal.fire({
                 text: error,
