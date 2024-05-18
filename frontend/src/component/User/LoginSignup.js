@@ -53,7 +53,7 @@ const LoginSignup = () => {
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("Info"));
         if(user || isAuthenticated){
-            navigate("/");
+            navigate("/account");
         }
         if(error){
             Swal.fire({
