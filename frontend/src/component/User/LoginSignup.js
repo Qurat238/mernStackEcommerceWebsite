@@ -35,7 +35,7 @@ const LoginSignup = () => {
 
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("Info"));
-        if(user){
+        if(user || isAuthenticated){
             navigate("/account");
         }
     }, [navigate])

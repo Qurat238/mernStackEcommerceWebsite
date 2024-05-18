@@ -89,13 +89,6 @@ function App() {
   }
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("Info"));
-    if(user){
-        navigate("/account");
-    }
-}, [navigate])
-  
-  useEffect(() => {
     dispatch(loadUser());
     getStripeApiKey();
   }, [dispatch]);
