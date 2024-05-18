@@ -34,6 +34,10 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
+app.get("/",(req,res) => {
+    res.json("Hello");
+  });
+
 //To run frontend and backend on same port
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
