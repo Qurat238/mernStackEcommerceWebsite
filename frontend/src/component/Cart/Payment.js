@@ -49,14 +49,11 @@ const Payment = () =>{
                     "Content-Type":"application/json",
                 },
             }
-            console.log(paymentData);
             const { data }  = await axios.post(
                 "https://mern-stack-ecommerce-website-orpin.vercel.app/api/v1/payment/process",
                 paymentData,
                 config
             );
-            console.log(data.client_secret);
-            console.log(data.client_secret);
             const client_secret = data.client_secret;
             if (!stripe || !elements ) return;
             const result = await stripe.confirmCardPayment(client_secret, {
@@ -103,7 +100,6 @@ const Payment = () =>{
                 confirmButtonText: 'Ok',
                 customClass: 'swal-wide'
             });
-            console.log(error.message);
         }
     }
 

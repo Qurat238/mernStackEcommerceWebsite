@@ -38,7 +38,7 @@ app.get("/",(req,res) => {
     res.json("Hello");
   });
 
-//To run frontend and backend on same port
+// To run frontend and backend on same port
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(express.static(join(__dirname, "./frontend/build")));

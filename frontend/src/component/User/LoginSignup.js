@@ -53,7 +53,8 @@ const LoginSignup = () => {
     const redirect = location.search ? location.search.split("=")[1] : "/account";
 
     useEffect(() => {
-        if(isAuthenticated){
+        const user = JSON.parse(localStorage.getItem("Info"));
+        if(user || isAuthenticated){
             navigate(redirect);
         }
         if(error){

@@ -25,9 +25,6 @@ const ResetPassword = () => {
         const myForm = new FormData();
         myForm.set("password", password);
         myForm.set("confirmPassword", confirmPassword);
-        console.log(password);
-        console.log(myForm);
-        console.log(params.token);
         dispatch(resetPassword(params.token, myForm));
     }
     useEffect(()=>{
