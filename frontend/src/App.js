@@ -45,14 +45,16 @@ function App() {
   const {loading, user, isAuthenticated} = useSelector((state) => state.user);
   const [stripeApiKey, setStripeApiKey] = useState("");
 
+  useEffect(() => {
+    dispatch(loadUser());
+    const getStripeApiKey = async () => {
+      const { data } = await axios.get("https://mern-stack-ecommerce-website-orpin.vercel.app/api/v1/stripeapikey");
+      setStripeApiKey(data.stripeApiKey);
+    };
+    getStripeApiKey();
+  }, [dispatch]);
+
   const isAdmin=true;
-
-  async function getStripeApiKey(){
-    const {data} = await axios.get("/api/v1/stripeapikey");
-    setStripeApiKey(data.stripeApiKey);
-  }
-
-  setTimeout(getStripeApiKey, 2000); 
 
   function UserElement({children}){
     if(isAuthenticated){
@@ -86,12 +88,6 @@ function App() {
       return <Navigate to="/login" />;
     }
   }
-
-  useEffect(() => {
-    dispatch(loadUser());
-    getStripeApiKey();
-  }, [dispatch]);
-
 
   // window.addEventListener("contextmenu", (e)=> e.preventDefault());
 
