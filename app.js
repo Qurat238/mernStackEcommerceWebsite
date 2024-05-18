@@ -1,5 +1,5 @@
 import express from "express";
-import errorMiddleware from "./backend/middleware/error.js";
+import errorMiddleware from "./middleware/error.js";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import fileUpload from "express-fileupload";
@@ -20,14 +20,14 @@ app.use(fileUpload());
 
 if(process.env.NODE_ENV!=="PRODUCTION"){
     // config
-    dotenv.config({path:"backend/config/config.env"});
+    dotenv.config({path:"config/config.env"});
 }
 
 // Route Imports
-import product from "./backend/routes/productRoute.js";
-import user from "./backend/routes/userRoute.js";
-import order from "./backend/routes/orderRoute.js";
-import payment from "./backend/routes/paymentRoute.js";
+import product from "./routes/productRoute.js";
+import user from "./routes/userRoute.js";
+import order from "./routes/orderRoute.js";
+import payment from "./routes/paymentRoute.js";
 
 app.use("/api/v1", product);
 app.use("/api/v1", user);

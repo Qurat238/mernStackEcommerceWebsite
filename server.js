@@ -1,7 +1,7 @@
 import app from "./app.js";
 import dotenv from "dotenv";
 import cloudinary from "cloudinary";
-import connectDatabase from "./backend/config/database.js";
+import connectDatabase from "./config/database.js";
 
 
 
@@ -14,7 +14,7 @@ process.on("uncaughtException", (err)=>{
 
 if(process.env.NODE_ENV!=="PRODUCTION"){
     // config
-    dotenv.config({path:"backend/config/config.env"});
+    dotenv.config({path:"config/config.env"});
 }
 
 // Connecting to Database
