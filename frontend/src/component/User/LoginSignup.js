@@ -50,12 +50,10 @@ const LoginSignup = () => {
         }
     }
 
-    const redirect = location.search ? location.search.split("=")[1] : "/account";
-
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("Info"));
         if(user || isAuthenticated){
-            navigate(redirect);
+            navigate("/");
         }
         if(error){
             Swal.fire({
@@ -66,7 +64,7 @@ const LoginSignup = () => {
             });
             dispatch(clearErrors());
         }
-    },[navigate, dispatch, error, isAuthenticated, redirect, Swal])
+    },[navigate, dispatch, error, isAuthenticated, Swal])
 
     const switchTabs = (e, tab) => {
         if(tab==="login"){
