@@ -32,7 +32,7 @@ const ConfirmOrder = () => {
             totalPrice
         }
         sessionStorage.setItem("orderInfo",JSON.stringify(data));
-        navigate("/payment/process");
+        navigate("https://mern-stack-ecommerce-website-orpin.vercel.app/payment/process");
     }
 
     const address = `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
