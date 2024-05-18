@@ -51,7 +51,7 @@ const Payment = () =>{
             }
             console.log(paymentData);
             const { data }  = await axios.post(
-                "/api/v1/payment/process",
+                "https://mern-stack-ecommerce-website-orpin.vercel.app/api/v1/payment/process",
                 paymentData,
                 config
             );
