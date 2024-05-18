@@ -48,7 +48,7 @@ function App() {
   useEffect(() => {
     dispatch(loadUser());
     const getStripeApiKey = async () => {
-      const { data } = await axios.get("https://mern-stack-ecommerce-website-orpin.vercel.app/api/v1/stripeapikey");
+      const { data } = await axios.get("/api/v1/stripeapikey");
       setStripeApiKey(data.stripeApiKey);
     };
     getStripeApiKey();
